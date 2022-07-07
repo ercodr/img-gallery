@@ -10,7 +10,7 @@ const SearchForm = ({ onSubmit, setSearchTerm, searchTerm }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         type="text"
         placeholder="search..."
-        className="appearance-none px-4 py-2 rounded-l rounded-r-none outline-none"
+        className="appearance-none px-4 py-2 rounded-r-none outline-none rounded-l"
       />
       <button
         type="submit"

@@ -4,12 +4,12 @@ import { GrView } from 'react-icons/gr'
 
 const ImageCard = ({ image }) => {
   return (
-    <li key={image.id} className="bg-white overflow-hidden rounded-lg">
+    <li key={image.id} className="bg-white overflow-hidden rounded">
       <div className="w-sm h-[15rem] bg-slate-900 overflow-hidden [&>*]:hover:flex [&>img]:hover:scale-[1.2] [&>img]:hover:opacity-50 relative [&>*]:transition-all [&>*]:duration-1000 [&>button]:translate-y-full [&>button]:hover:translate-y-0">
         <img
           src={image.webformatURL}
           alt=""
-          className="w-full h-full object-cover rounded-t-lg"
+          className="w-full h-full object-cover "
         />
         <button className="flex absolute font-black inset-0 justify-center items-center  text-slate-100 cursor-default">
           <span
@@ -26,6 +26,7 @@ const ImageCard = ({ image }) => {
             src={image.userImageURL}
             alt=""
             className="w-[60px] h-[60px] object-cover"
+            onError={(e) => (e.target.style.display = 'none')}
           />
         </div>
       </div>
